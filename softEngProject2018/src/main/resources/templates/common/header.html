@@ -1,0 +1,48 @@
+<header>
+	<nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+		<a class="navbar-brand" href="/" style="color:DarkOrange;">Διαδικτυακό Παρατηρητήριο Τιμών</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" th:classappend="${(current_page == 'find.html' || current_page == 'browse_products.html' || current_page == 'add_product.html') ? 'active' : ''}" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Προϊόντα
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" th:classappend="${current_page == 'find.html' ? 'active' : ''}" href="find">Εύρεση</a>
+						<a class="dropdown-item" th:classappend="${current_page == 'browse_products.html' ? 'active' : ''}" href="browse_products">Περιήγηση Προϊόντων</a>
+						<a class="dropdown-item" th:classappend="${current_page == 'add_product.html' ? 'active' : ''}" href="add_product">Προσθήκη Νέου Προϊόντος</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" th:classappend="${(current_page == 'browse_shops.html' || current_page == 'add_shop.html') ? 'active' : ''}" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Καταστήματα
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" th:classappend="${current_page == 'browse_shops.html' ? 'active' : ''}" href="browse_shops">Περιήγηση Καταστημάτων</a>
+						<a class="dropdown-item" th:classappend="${current_page == 'add_shop.html' ? 'active' : ''}" href="add_shop">Προσθήκη Νέου Καταστήματος</a>
+					</div>
+				</li>
+				<li class="nav-item" th:classappend="${current_page == 'users.html' ? 'active' : ''}">
+					<a class="nav-link" href="users">Χρήστες</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link NOT_LOGGED" th:classappend="${current_page == 'account.html' ? 'active' : ''}" href="account">Είσοδος/Εγγραφή</a>
+					<a class="nav-link LOGGED" th:classappend="${current_page == 'account.html' ? 'active' : ''}" href="account">Λογαριασμός</a>
+				</li>
+				<li class="nav-item" th:classappend="${current_page == 'about.html' ? 'active' : ''}">
+					<a class="nav-link" href="about">Σχετικα με εμάς</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<form id="searchNavbar" class="form-inline my-2 my-lg-0">
+					<input type="string" id="inputSearchNavbar" class="form-control mr-sm-2"  placeholder="Αναζήτηση Ετικετών">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ψάξε!</button>
+				</form>
+			</ul>
+		</div>
+		
+	</nav>
+</header>

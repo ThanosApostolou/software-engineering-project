@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="common/head.html" />
+    <body class="bg-light">
+		<header th:replace="common/header.html" th:with="products_active=true"></header>
+        
+        <main class="container-fluid">
+            <div class="d-flex flex-column align-items-center">           
+                <form id="BrowseShopsForm">
+                    <div class="form-row">
+                        <div class="form-group col-sm">
+                            <label for="inputCount">Καταστήματα ανά σελίδα</label>
+                            <input type="number" class="form-control" id="inputCount" min="1"  th:value="${count}">
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="selectStatus">Κατάσταση</label>
+                            <select type="number" class="form-control" id="selectStatus">
+                                <option value="ACTIVE" th:selected="${status=='ACTIVE'}">Ενεργά</option>
+                                <option value="WITHDRAWN" th:selected="${status=='WITHDRAWN'}">Αποσυρμένα</option>
+                                <option value="ALL" th:selected="${status=='ALL'}">Όλα</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="selectSort">Ταξινόμηση κατά</label>
+                            <select type="number" class="form-control" id="selectSort">
+                                <option value="id|DESC" th:selected="${sort=='id|DESC'}">Φθίνων id</option>
+                                <option value="id|ASC" th:selected="${sort=='id|ASC'}">Αύξων id</option>
+                                <option value="name|DESC" th:selected="${sort=='name|DESC'}">Φθίνων όνομα</option>
+                                <option value="name|ASC" th:selected="${sort=='name|ASC'}">Αύξων όνομα</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary col-sm">Περιήγηση Καταστημάτων</button>
+                    </div>
+                </form>
+
+                <div id="outputDiv"></div>
+            </div>
+        </main>
+    
+        <footer th:replace="common/footer.html"></footer>
+
+        <script th:insert="scripts/browse_shops.js"></script>
+    </body>
+</html>

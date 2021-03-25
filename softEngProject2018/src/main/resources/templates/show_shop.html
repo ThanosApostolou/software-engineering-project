@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="common/head.html" />
+    <body>
+		<header th:replace="common/header.html"></header>
+
+        <main class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <form class="form" id="ShowShopForm">
+                        <fieldset class="form-group border p-2">
+                            <legend class="col-form-label">Κατάστημα με ID: <span th:text="${id}"></span></legend>
+                            <div class="row">
+                                <label class="col-sm-2 control-label" for="inputName">Όνομα</label>
+                                <div class="col-sm-10">
+                                    <input type="string" class="form-control LOGGED_ENABLE" id="inputName" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 control-label" for="inputAddress">Διεύθυνση</label>
+                                <div class="col-sm-10">
+                                    <input type="string" class="form-control LOGGED_ENABLE" id="inputAddress" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 control-label" for="inputLng">Γεωγραφικό Μήκος</label>
+                                <div class="col-sm-10">
+                                    <input type="number" step="any" class="form-control LOGGED_ENABLE" id="inputLng" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 control-label" for="inputLat">Γεωγραφικό Πλάτος</label>
+                                <div class="col-sm-10">
+                                    <input type="number" step="any" class="form-control LOGGED_ENABLE" id="inputLat" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 control-label" for="inputTags">Ετικέτες</label>
+                                <div class="col-sm-10">
+                                    <input type="string" class="form-control LOGGED_ENABLE" id="inputTags" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 control-label" for="selectStatus">Κατάσταση</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control LOGGED_ENABLE" id="selectStatus" disabled>
+                                        <option value="" selected="selected" hidden="hidden"></option>
+                                        <option value="false">Ενεργό</option>
+                                        <option value="true">Αποσυρμένο</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <button type="submit" class="btn btn-primary LOGGED LOGGED_ENABLE" disabled>Ενημέρωση</button>
+                                    <button type="button" class="btn btn-primary LOGGED LOGGED_ENABLE" id="DeleteButton" disabled>Διαγραφή</button>
+                                    <h4 class="NOT_LOGGED">
+                                        Για να κάνεις αλλαγές πρέπει πρώτα να <a href="/account" class="badge badge-primary">Συνδεθείς!</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div id="map"></div>
+            </div>
+        </main>
+        <div class="container">
+            
+        </div>
+    
+        <footer th:replace="common/footer.html"></footer>
+
+        <script th:insert="scripts/show_shop.js"></script>
+    </body>
+</html>

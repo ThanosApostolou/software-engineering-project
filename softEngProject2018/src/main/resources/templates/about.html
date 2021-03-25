@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="common/head.html" />
+    <body class="bg-light">
+		<header th:replace="common/header.html"></header>
+		
+		<main class="container-fluid">
+			<div class="d-flex flex-column align-items-center">
+				<h1>HMMY's Got Talent</h1>
+				<p>Είμαστε μια ομάδα ταλαντούχων φοιτητών στη σχολή <b>Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών</b> του <b>Εθνικού Μετσόβιου Πολυτεχνείου</b>.
+				Στόχος μας είναι να ολοκληρώσουμε μια απίστευτη εργασία που μας ανατέθηκε για το μάθημα "Τεχνολογία Λογισμικού" της σχολής μας!</p>
+			</div>
+			<br>
+            <div class="row">
+				<div class="col-md">
+					<div class="card h-100">
+						<img class="card-img-top" src="images/people/thanos-apostolou.jpg" alt="Card image">
+						<div class="card-body">
+							<h4 class="card-title">Θάνος Αποστόλου</h4>
+							<p class="card-text">Προγραμματιστής front end</p>
+						</div>
+						<div class="card-footer text-center">
+							<a href="https://gitlab.com/ThanosApostolou" class="btn btn-primary">Λογαριασμός Gitlab</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="card h-100">
+						<img class="card-img-top" src="images/people/daphne-tsolissou.jpg" alt="Card image">
+						<div class="card-body">
+							<h4 class="card-title">Δάφνη Τσολίσου</h4>
+							<p class="card-text">Προγραμματίστρια back end & βάσης δεδομένων</p>
+						</div>
+						<div class="card-footer text-center">
+							<a href="https://gitlab.com/daphnekapts" class="btn btn-primary">Λογαριασμός Gitlab</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="card h-100">
+						<img class="card-img-top" src="images/people/mike-athanasopoulos.jpg" alt="Card image">
+						<div class="card-body">
+							<h4 class="card-title">Μιχάλης Αθανασόπουλος</h4>
+							<p class="card-text">Προγραμματιστής back end and βάσης δεδομένων</p>
+						</div>
+						<div class="card-footer text-center">
+							<a href="https://gitlab.com/UnfitMihosR23" class="btn btn-primary">Λογαριασμός Gitlab</a>
+						</div>
+					</div>
+				</div>
+            </div>
+		</main>
+
+        <footer th:replace="common/footer.html"></footer>
+    </body>
+</html>

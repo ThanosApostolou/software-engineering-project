@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="common/head.html" />
+    <body class="bg-light">
+        <header th:replace="common/header.html" th:with="products_active=true"></header>
+        
+        <main class="container">
+                <h4 class="NOT_LOGGED">
+                    Για να προσθέσεις καινούριο προϊόν, πρέπει πρώτα να <a href="/account" class="badge badge-primary">Συνδεθείς!</a>
+                </h4>
+                <form class="form LOGGED" id="AddProductForm">
+                <fieldset class="form-group border p-2">
+                    <legend class="col-form-label">Νέο Προϊόν</legend>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputName">Όνομα</label>
+                        <div class="col-sm-10">
+                            <input type="string" class="form-control" id="inputName" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputDescription">Περιγραφή</label>
+                        <div class="col-sm-10">
+                            <input type="string" class="form-control" id="inputDescription" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputTags">Ετικέτες</label>
+                        <div class="col-sm-10">
+                            <input type="string" class="form-control" id="inputTags" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputCategory">Κατηγορία</label>
+                        <div class="col-sm-10">
+                            <input type="string" class="form-control" id="inputCategory" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-primary LOGGED">Προσθήκη</button>
+                        </div>
+                    </div>
+                </fieldset>                
+            </form>
+        </main>
+
+        <footer th:replace="common/footer.html"></footer>
+
+        <script th:insert="scripts/add_product.js"></script>
+    </body>
+</html>

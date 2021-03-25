@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="common/head.html" />
+	<body class="bg-light">
+		<header th:replace="common/header.html"></header>
+        
+        <main class="container-fluid">
+            <div class="NOT_LOGGED">
+                <div class="d-md-flex">
+                    <form id="LoginForm" class="col-md">
+                        <fieldset class="form-group border p-2">
+                            <legend class="col-form-label">Σύνδεση</legend>
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="inputName">Όνομα</label>
+                                <div class="col-sm-9">
+                                    <input type="string" class="form-control" id="inputName">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="inputPassword">Κωδικός</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="inputPassword">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <button type="submit" class="btn btn-primary">Σύνδεση</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <form id="RegisterForm" class="col-md">
+                        <fieldset class="form-group border p-2">
+                            <legend class="col-form-label">Εγγραφή</legend>
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="inputRegisterName">Όνομα</label>
+                                <div class="col-sm-9">
+                                    <input type="string" class="form-control" id="inputRegisterName">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="inputRegisterEmail">Email</label>
+                                <div class="col-sm-9">
+                                    <input type="string" class="form-control" id="inputRegisterEmail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="inputRegisterPassword">Κωδικός</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="inputRegisterPassword">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <button type="submit" class="btn btn-primary">Εγγραφή</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="LOGGED">
+                <div class="d-flex flex-column align-items-center">
+                    <p>Καλωσήρθες χρήστη!</p>
+                    <button type="submit" class="btn btn-primary" id="buttonLogout">Αποσύνδεση</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer th:replace="common/footer.html"></footer>
+        
+        <script th:insert="scripts/account.js"></script>
+    </body>
+</html>

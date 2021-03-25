@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="common/head.html" />
+    <body class="bg-light">
+        <header th:replace="common/header.html" th:with="products_active=true"></header>
+
+         <main class="container">
+                <h4 class="NOT_LOGGED">
+                    Για να προσθέσεις καινούριο κατάστημα, πρέπει πρώτα να <a href="/account" class="badge badge-primary">Συνδεθείς!</a>
+                </h4>
+                <form class="form LOGGED" id="AddShopForm">
+                <fieldset class="form-group border p-2">
+                    <legend class="col-form-label">Νέο Κατάστημα</legend>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputName">Όνομα</label>
+                        <div class="col-sm-10">
+                            <input type="string" class="form-control LOGGED" id="inputName" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputAddress">Διεύθυνση</label>
+                        <div class="col-sm-10">
+                            <input type="string" class="form-control LOGGED" id="inputAddress" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputLng">Γεωγραφικό Μήκος</label>
+                        <div class="col-sm-10">
+                            <input type="number" step="any" class="form-control LOGGED" id="inputLng" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputLat">Γεωγραφικό Πλάτος</label>
+                        <div class="col-sm-10">
+                            <input type="number" step="any" class="form-control LOGGED" id="inputLat" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 control-label" for="inputTags">Ετικέτες</label>
+                        <div class="col-sm-10">
+                            <input type="string" class="form-control LOGGED" id="inputTags" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-primary LOGGED">Προσθήκη</button>
+                            <h4 class="NOT_LOGGED">
+                                Για να προσθέσεις κατάστημα πρέπει πρώτα να <a href="/account" class="badge badge-primary">Συνδεθείς!</a>
+                            </h4>
+                        </div>
+                    </div>
+                </fieldset>                
+            </form>
+        </main>
+
+        <footer th:replace="common/footer.html"></footer>
+
+        <script th:insert="scripts/add_shop.js"></script>
+    </body>
+</html>

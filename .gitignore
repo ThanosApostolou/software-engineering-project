@@ -1,0 +1,15 @@
+*.synctex.gz
+*.aux
+*.~lock.StRS_template.docx\#
+*.log
+*.vpp.bak*
+*.vpp.lck
+*.project
+*.iml
+
+.settings/
+.gradle/
+.idea/
+build/
+out/
+*.jar

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="common/head.html" />
+    <body class="bg-light">
+		<header th:replace="common/header.html"></header>
+        
+        <main class="container-fluid">
+            <div class="d-flex flex-column align-items-center">
+                <h1>Καλωσήρθατε στο Διαδικτυακό Παρατηρητήριο Τιμών</h1>
+                <p>Εδώ μπορείτε να βρείτε χιλιάδες προϊόντα από εκατοντάδες καταστήματα!</p>
+            </div>
+            <div id="stores" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#stores" data-slide-to="0" class="active"></li>
+                    <li data-target="#stores" data-slide-to="1"></li>
+                    <li data-target="#stores" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/store1.jpg" alt="Store 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/store2.jpg" alt="Store 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/store3.jpg" alt="Store 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#stores" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#stores" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </main>
+
+        <footer th:replace="common/footer.html"></footer>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="common/head.html" />
+    <body>
+		<header th:replace="common/header.html"></header>
+
+        <main class="container-fluid">
+            <div class="d-flex flex-column align-items-center">           
+                <form id="FindForm" class="form-inline">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputCount">Αποτελέσματα ανά σελίδα</label>
+                            <input type="number" class="form-control" id="inputCount" min="1"  th:value="${count}">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGeoDist">Απόσταση</label>
+                            <input type="number" step="any" class="form-control" id="inputGeoDist" th:value="${geoDist}">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGeoLng">Γεωγραφικό Μήκος</label>
+                            <input type="number" step="any" class="form-control" id="inputGeoLng" th:value="${geoLng}">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGeoLat">Γεωγραφικό Πλάτος</label>
+                            <input type="number" step="any" class="form-control" id="inputGeoLat" th:value="${geoLat}">
+                        </div>
+                        <div class="form-group">
+                            <label for="dateFrom">Από</label>
+                            <input type="date" class="form-control" id="inputDateFrom"  th:value="${dateFrom}">
+                        </div>
+                        <div class="form-group">
+                            <label for="dateTo">Μέχρι</label>
+                            <input type="date" class="form-control" id="inputDateTo"  th:value="${dateTo}">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputShops">Καταστήματα</label>
+                            <input type="string" class="form-control" id="inputShops"  th:value="${shops}">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputProducts">Προϊόντα</label>
+                            <input type="string" class="form-control" id="inputProducts" th:value="${products}">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTags">Ετικέτες</label>
+                            <input type="string" class="form-control" id="inputTags" th:value="${tags}">
+                        </div>
+                        <div class="form-group">
+                            <label for="selectSort">Ταξινόμηση κατά</label>
+                            <select type="number" class="form-control" id="selectSort">
+                                <option value="geoDist|DESC" th:selected="${sort=='geoDist|DESC'}">Φθίνουσα Απόσταση</option>
+                                <option value="geoDist|ASC" th:selected="${sort=='geoDist|ASC'}">Αύξουσα Απόσταση</option>
+                                <option value="price|DESC" th:selected="${sort=='price|DESC'}">Φθίνουσα Τιμή</option>
+                                <option value="price|ASC" th:selected="${sort=='price|ASC'}">Αύξουσα Τιμή</option>
+                                <option value="date|DESC" th:selected="${sort=='date|DESC'}">Φθίνουσα Ημερομηνία</option>
+                                <option value="date|ASC" th:selected="${sort=='date|ASC'}">Αύξουσα Ημερομηνία</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-primary col-lg">Αναζήτηση</button>
+                    </div>
+                </form>
+
+                <div id="outputDiv"></div>
+            </div>
+        </main>
+    
+        <footer th:replace="common/footer.html"></footer>
+        
+        <script th:insert="scripts/find.js"></script>
+    </body>
+</html>
