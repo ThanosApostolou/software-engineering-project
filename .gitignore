@@ -5,11 +5,13 @@
 *.vpp.bak*
 *.vpp.lck
 *.project
+.classpath
 *.iml
 
 .settings/
 .gradle/
 .idea/
 build/
+softEngProject2018/bin/
 out/
 *.jar
