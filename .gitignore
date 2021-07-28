@@ -12,6 +12,5 @@
 .gradle/
 .idea/
 build/
-softEngProject2018/bin/
+web-prices-observatory/bin/
 out/
-*.jar

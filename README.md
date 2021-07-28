@@ -1,11 +1,11 @@
 # HMMYs Got Talent
 
-Αθανασόπουλος Μιχαήλ Παναγιώτης 03113909  
-Αποστόλου Θάνος 03112910  
-Βασιλόπουλος Νικόλαος 03113080  
-Διακόπουλος Ορέστης 03113101  
-Λαζάρου Σταύρος 03112642  
-Τσολίσου Δάφνη 03109752 
+Αθανασόπουλος Μιχαήλ Παναγιώτης 03113909
+Αποστόλου Θάνος 03112910
+Βασιλόπουλος Νικόλαος 03113080
+Διακόπουλος Ορέστης 03113101
+Λαζάρου Σταύρος 03112642
+Τσολίσου Δάφνη 03109752
 
 ## Build & Run
 Clone this repository
@@ -16,7 +16,7 @@ Clone this repository
   2. Build-> Build Project
   3. Run-> Run 'Application'
 - With terminal
-  1. cd softEngProject2018
+  1. cd web-prices-observatory
   2. ./gradlew build
   3. ./gradlew bootRun
 
@@ -28,15 +28,15 @@ Use https:localhost:8765 for webapp and https:localhost:8765/observatory/api/ fo
   ```
   CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
   GRANT ALL PRIVILEGES ON softeng2018.* TO 'user'@'localhost';
-  source PATH/TO/softEngProject2018/src/main/resources/sql/schema.sql;
-  source PATH/TO/softEngProject2018/src/main/resources/sql/data.sql;
+  source PATH/TO/web-prices-observatory/src/main/resources/sql/schema.sql;
+  source PATH/TO/web-prices-observatory/src/main/resources/sql/data.sql;
   ```
 
 ## Deploy
 1. Build Project
 2. Create jar with `./gradlew bootJar`
-3. Distribute `build/libs/softEngProject2018-VERSION.jar`
-4. Run it with `java -jar softEngProject2018-VERSION.jar`
+3. Distribute `build/libs/web-prices-observatory-VERSION.jar`
+4. Run it with `java -jar web-prices-observatory-VERSION.jar`
 
 
 ## Usefull infromation
