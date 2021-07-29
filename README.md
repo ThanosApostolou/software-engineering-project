@@ -1,11 +1,9 @@
-# HMMYs Got Talent
+# Web Prices Observatory
+Web application for buying products and searching stores.
 
-Αθανασόπουλος Μιχαήλ Παναγιώτης 03113909
-Αποστόλου Θάνος 03112910
-Βασιλόπουλος Νικόλαος 03113080
-Διακόπουλος Ορέστης 03113101
-Λαζάρου Σταύρος 03112642
-Τσολίσου Δάφνη 03109752
+### Technologies used:
+  - Backend: Java, Spring Boot/MVC/Data JPA, Thymeleaf, MySQL.
+  - Frontend: HTML, CSS, Javascript, jQuery, Bootstrap.
 
 ## Build & Run
 Clone this repository
